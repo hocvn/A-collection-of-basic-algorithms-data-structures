@@ -1,4 +1,4 @@
-// Minimum sum distances from 3 points
+// Minimum perimeter triangle
 // Complexity O(n*log(n))
 
 #include <iostream>
