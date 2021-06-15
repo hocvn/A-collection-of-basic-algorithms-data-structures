@@ -35,8 +35,7 @@ void push(int y){
 }
 void pop(){
 
-	a[1] = a[sz];
-	sz--;
+	a[1] = a[sz--];
 	heapify_pop(1);
 }
 int main(){
