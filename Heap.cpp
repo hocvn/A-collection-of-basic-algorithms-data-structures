@@ -8,10 +8,11 @@ int n,x,a[N],sz;
 
 void heapify_push(int i){
 
+	if (i <= 1) return;
 	int par = i/2;
 	if (a[par] > a[i]){
 		swap(a[par],a[i]);
-		if (i > 1) heapify_push(par);
+		heapify_push(par);
 	}
 }
 void heapify_pop(int i){
