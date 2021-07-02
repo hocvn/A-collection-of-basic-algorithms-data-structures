@@ -40,8 +40,6 @@ ll query(int x,int y,int u,int v){
 }
 int main(){
 
-	freopen("SUMTABLE.inp","r",stdin);
-	freopen("SUMTABLE.out","w",stdout);
 	ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
 	enter();
 	int type,x,y,u,v;
