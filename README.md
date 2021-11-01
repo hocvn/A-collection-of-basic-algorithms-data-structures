@@ -7,4 +7,4 @@
 * [Geekforgeeks](https://www.geeksforgeeks.org/)
 * [Codeforces](http://codeforces.com/)
 * [Hackerrank](https://www.hackerrank.com/)
-* [Brillian](https://brilliant.org/wiki/algorithm/)
+* [Brilliant](https://brilliant.org/wiki/algorithm/)
