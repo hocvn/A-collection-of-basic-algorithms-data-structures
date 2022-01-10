@@ -1,3 +1,4 @@
+//https://oj.vnoi.info/problem/qtree3
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -6,7 +7,7 @@ using namespace std;
 const int inf = 1e9;
 
 vector <int> a[N];
-int head[N],label[N],child[N],par[N];
+int head[N],label[N],child[N],dep[N],par[N];
 int st[4*N],heavy[N],pos[N],b[N];
 int n,q,nchain,cnt;
 
@@ -23,6 +24,7 @@ void enter(){
 void DFS(int u,int parent){
 
 	par[u] = parent;
+    dep[u] = dep[parent] + 1;
     for (int v : a[u]){
 		if (v == parent) continue;
         DFS(v,u);
@@ -86,9 +88,8 @@ int get(int x){
 }
 int main(){
 
-    ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+    ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
     enter();
-    nchain = 1;
     DFS(1,0);
     hld(1,0);
     build(1,1,n);
@@ -103,4 +104,3 @@ int main(){
     }
     return 0;
 }
-
