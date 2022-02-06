@@ -1,3 +1,6 @@
+// https://vn.spoj.com/problems/KBUILD/
+// LCA using Sparse Table
+
 #include <iostream>
 #include <vector>
 using namespace std;
