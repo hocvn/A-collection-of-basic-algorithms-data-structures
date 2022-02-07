@@ -1,5 +1,5 @@
 # A collection of basic algorithms 
-**Nguồn**
+**Sources**
 
 * [CP algorithm](https://cp-algorithms.com/)
 * [VNOI](https://vnoi.info/wiki/Home)
