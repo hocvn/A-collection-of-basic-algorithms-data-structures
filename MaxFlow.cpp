@@ -33,7 +33,7 @@ int main(){
     scanf("%d%d%d%d",&n,&m,&s,&t);
     for (int i = 1,x,y,w; i <= m; i++){
         scanf("%d%d%d",&x,&y,&w);
-        a[x][y] = a[y][x] = w;
+        a[x][y] = w;
     }
     int tmp;
     while (tmp = find_path()){
