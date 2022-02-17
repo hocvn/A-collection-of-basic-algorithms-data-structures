@@ -1,3 +1,5 @@
+// Ford–Fulkerson using BFS
+
 #include <iostream>
 #include <queue>
 using namespace std;
