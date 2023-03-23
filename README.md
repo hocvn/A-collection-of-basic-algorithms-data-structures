@@ -1,4 +1,4 @@
-# A collection of basic algorithms 
+# A collection of basic algorithms, data structures
 **Sources**
 
 * [CP algorithm](https://cp-algorithms.com/)
