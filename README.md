@@ -1,5 +1,5 @@
 # A collection of basic algorithms, data structures
-**Sources**
+**Reference**
 
 * [CP algorithm](https://cp-algorithms.com/)
 * [VNOI](https://vnoi.info/wiki/Home)
