@@ -1,4 +1,7 @@
 # A collection of basic algorithms, data structures
+
+These codes were written by me, I learnt from the internet.
+
 **Reference**
 
 * [CP algorithm](https://cp-algorithms.com/)
