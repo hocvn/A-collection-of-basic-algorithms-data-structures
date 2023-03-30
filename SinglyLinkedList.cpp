@@ -81,7 +81,7 @@ void pushWithValue(LinkedList& list, int val, int x) {
 		pushFirstElement(list, val);
 		return;
 	}
-	
+
 	Node* temp = list.Head;
 	Node* newNode = createNode(val);
 
@@ -118,7 +118,7 @@ void pushWithPosition(LinkedList& list, int val, int pos) {
 	Node* temp = list.Head;
 
 	for (int i = 2; i < pos; i++) {
-		
+
 		if (temp->pNext == NULL) {
 			cout << "Can't add element!\n";
 			return;
@@ -136,8 +136,58 @@ void pushWithPosition(LinkedList& list, int val, int pos) {
 	}
 }
 
+void deleteHead(LinkedList& list) {
+
+	if (isEmpty(list)) {
+		return;
+	}
+	if (list.Head == NULL) {
+		return;
+	}
+	Node* temp = list.Head;
+	list.Head = list.Head->pNext;
+	delete temp;
+	temp = NULL;
+}
+
+void deleteTail(LinkedList& list) {
+
+	if (isEmpty(list)) {
+		return;
+	}
+	Node* temp = list.Head;
+
+	while (temp->pNext != list.Tail) {
+		temp = temp->pNext;
+	}
+
+	delete list.Tail;
+	list.Tail = NULL;
+
+	list.Tail = temp;
+	list.Tail->pNext = NULL;
+}
+
+// Delete linked list
+void deleteList(LinkedList& list) {
+
+	Node* temp = NULL;
+
+	while (list.Head != NULL) {
+		temp = list.Head;
+		list.Head = list.Head->pNext;
+		delete(temp);
+	}
+
+	list.Head = list.Tail = NULL;
+}
+
 // Delete element with value X (only one element)
 void deleteWithValue(LinkedList& list, int x) {
+
+	if (isEmpty(list)) {
+		return;
+	}
 
 	Node* temp = list.Head;
 
@@ -148,13 +198,15 @@ void deleteWithValue(LinkedList& list, int x) {
 
 	while (temp->pNext != NULL) {
 		if ((temp->pNext)->val == x) {
+
+			delete temp->pNext;
 			temp->pNext = (temp->pNext)->pNext;
-			
+
 			// Check last element of linked list
 			if (list.Tail == temp->pNext) {
 				list.Tail = temp;
 			}
-			return; 
+			return;
 		}
 		temp = temp->pNext;
 	}
@@ -164,15 +216,19 @@ void deleteWithValue(LinkedList& list, int x) {
 // Delete element at position
 void deleteWithPosition(LinkedList& list, int pos) {
 
+	if (isEmpty(list)) {
+		return;
+	}
+
 	Node* temp = list.Head;
 
 	if (pos == 1) {
 		list.Head = temp->pNext;
 		return;
 	}
-	
+
 	for (int i = 2; i < pos; i++) {
-		
+
 		temp = temp->pNext;
 
 		if (temp->pNext == NULL) {
@@ -181,12 +237,30 @@ void deleteWithPosition(LinkedList& list, int pos) {
 		}
 	}
 
+	delete temp->pNext;
 	temp->pNext = (temp->pNext)->pNext;
 
 	// Check last element of linked list
 	if (list.Tail == temp->pNext) {
 		list.Tail = temp;
 	}
+}
+
+void reverseList(LinkedList& list) {
+
+	Node* cur = list.Head;
+	Node* prev = NULL;
+	Node* next = NULL;
+
+	list.Tail = list.Head;
+
+	while (cur != NULL) {
+		next = cur->pNext;
+		cur->pNext = prev;
+		prev = cur;
+		cur = next;
+	}
+	list.Head = prev;
 }
 
 // Print linked list
@@ -197,7 +271,7 @@ void display(LinkedList list) {
 	}
 	cout << '\n';
 }
- 
+
 int main() {
 
 	LinkedList list;
@@ -212,13 +286,13 @@ int main() {
 	pushEnd(list, 7);
 	pushEnd(list, 8);
 
-	pushWithValue(list, 9, 8);
+	display(list);
 
-	pushWithPosition(list, 10, 11);
+	pushWithPosition(list, 9, 9);
 
-	deleteWithValue(list, 10);
+	pushWithValue(list, 10, 9);
 
-	deleteWithPosition(list, 9);
+	reverseList(list);
 
 	display(list);
 
