@@ -141,9 +141,7 @@ void deleteHead(LinkedList& list) {
 	if (isEmpty(list)) {
 		return;
 	}
-	if (list.Head == NULL) {
-		return;
-	}
+
 	Node* temp = list.Head;
 	list.Head = list.Head->pNext;
 	delete temp;
