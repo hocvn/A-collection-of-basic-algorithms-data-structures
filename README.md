@@ -1,6 +1,7 @@
 # A collection of basic algorithms, data structures
 
-These codes were written by me, I learnt from the internet.
+These codes were written by me, I learnt from the internet.  
+If there are any errors, please add an issue. I will try to fix it 😃.
 
 **Reference**
 
