@@ -1,9 +1,10 @@
 # A collection of basic algorithms, data structures
 
 These codes were written by me, I learnt from the internet.  
-If there are any errors, please add an issue. I will try to fix it 😃.
+If there are any errors, please contact me. I will try to fix it 😃.
+Gmail: hocdoth04@gmail.com
 
-**Reference**
+**References**
 
 * [CP algorithm](https://cp-algorithms.com/)
 * [VNOI](https://vnoi.info/wiki/Home)
