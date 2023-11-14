@@ -1,7 +1,7 @@
 # A collection of basic algorithms, data structures
 
 These codes were written by me, I learnt from the internet.  
-If there are any errors, please contact me. I will try to fix it 😃.
+If there are any errors, please contact me. I will try to fix it 😃.  
 Gmail: hocdoth04@gmail.com
 
 **References**
